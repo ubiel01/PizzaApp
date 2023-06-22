@@ -17,7 +17,10 @@ class ProdutoTamanhoFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'id_produto' => fake()->numberBetween(1,50),
+            'id_tamanho' => 1,
+            'preco' => fake()->numberBetween(10,500),
+            'observacoes' => fake()->text(200),
         ];
     }
 }
