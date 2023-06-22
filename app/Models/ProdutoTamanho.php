@@ -32,12 +32,12 @@ class ProdutoTamanho extends Model
      */
 
      public function produto():object {
-        return $this->hasOne(Cliente::class, 'id_produto',
+        return $this->hasOne(Produto::class, 'id_produto',
                                              'id_produto');
     }
 
     public function tamanho():object {
-        return $this->hasOne(Endereco::class,'id_tamanho',
+        return $this->hasOne(Tamanho::class,'id_tamanho',
                                              'id_tamanho');
     }
 }
