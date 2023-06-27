@@ -13,7 +13,7 @@ use App\Models\{
 
 class ClienteEndereco extends Model
 {
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
 
     protected $table = 'clientes_enderecos';
     protected $primaryKey = 'id_cliente_endereco';

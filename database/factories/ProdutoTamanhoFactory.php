@@ -20,7 +20,7 @@ class ProdutoTamanhoFactory extends Factory
             'id_produto' => fake()->numberBetween(1,50),
             'id_tamanho' => 1,
             'preco' => fake()->numberBetween(10,500),
-            'observacoes' => fake()->text(200),
+            'observacoes' => fake()->text(),
         ];
     }
 }
