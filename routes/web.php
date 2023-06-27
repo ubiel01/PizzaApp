@@ -10,6 +10,8 @@ use App\Http\Controllers\{
     ProdutoTamanhoController,
     ProfileController,
 };
+use App\Models\ProdutoTamanho;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -121,7 +123,7 @@ Route::middleware('auth')->group(function () {
  * --------------------------------------------------------------------------
  */
 
- Route::prefix('tamanhos')->controller(TamanhoController::class)->group(function() {
+ Route::prefix('tamanhos')->controller(ProdutoTamanhoController::class)->group(function() {
     Route::get('/','index')->name('tamanho.index');
     Route::get('/novo','create')->name('tamanho.create');
     Route::get('/{id}','show')->name('tamanho.show');
